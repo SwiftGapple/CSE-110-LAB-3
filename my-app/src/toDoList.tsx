@@ -29,10 +29,13 @@ export function ToDoList() {
 
    setNumRemainingItems(numRemainingItems + diff);
  }
+ //1.5 features
+ const { name } = useParams();
 
  return (
    <div className="App">
      <div className="App-body">
+        <h1>{name}'s To Do List</h1>
        Items bought: {numRemainingItems}
        <form action=".">
          {items.map((item) => ListItem(item, handleCheckboxClick))}

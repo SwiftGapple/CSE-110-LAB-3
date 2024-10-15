@@ -20,7 +20,7 @@ function App() {
     <Navbar />
     <Routes>
       <Route path="/" element={<StickyNotes />} />
-      <Route path="/todolistL:name" element={<ToDoList />} />
+      <Route path="/todolist/:name" element={<ToDoList />} />
     </Routes>
   </div>
   );
