@@ -95,6 +95,7 @@ export function AppMain() {
 
     	<div>
       	<textarea
+          placeholder="Note Content"
         	onChange={(event) =>
           	setCreateNote({ ...createNote, content: event.target.value })}
         	required>
@@ -123,11 +124,11 @@ export function AppMain() {
         	className="note-item" style={{ background: theme.background}}
       	>
         	<div className="notes-header">
-            <LikeButton currNote={note} />
-            <DeleteNote currNote={note} />
-
+              <LikeButton currNote={note} />
+              <DeleteNote currNote={note} />
         	</div>
-            <h2 style={{ color: theme.foreground}} contentEditable="true"> {note.title} </h2>
+
+            <h2 style={{ color: theme.foreground}} contentEditable="true" data-testid={`note-content-${note.id}`}> {note.title} </h2>
             <p style={{ color: theme.foreground}} contentEditable="true"> {note.content} </p>
             <p style={{ color: theme.foreground}} contentEditable="true"> {note.label} </p>
       	</div>
